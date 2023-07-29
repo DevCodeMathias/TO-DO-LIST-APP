@@ -65,3 +65,13 @@ h1{
     margin-left: auto;
   }
 
+.input-time{
+    border-radius: 5px;
+    border-style: none;
+    margin-left: 60%;
+    font-family: Martian Mono;
+    font-size:10px ;
+    background-color: #62706ba5 ;
+    cursor: pointer;
+    
+  }
