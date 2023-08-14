@@ -5,7 +5,7 @@ const taskList = document.querySelector('.tasklist')
 
 
 
-const myTask = function(){
+var myTask = (function(){
     addbutton.addEventListener('click',function(){
 
         
@@ -40,6 +40,6 @@ const myTask = function(){
         }
     })
 }
+());
 
-myTask()
  

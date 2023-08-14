@@ -63,15 +63,25 @@ h1{
 .task-checkbox {
     margin-right: 10px;
     margin-left: auto;
+    
   }
 
-.input-time{
+  
+
+  .input-time {
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border-style: none;
-    margin-left: 60%;
-    font-family: Martian Mono;
-    font-size:10px ;
-    background-color: #62706ba5 ;
-    cursor: pointer;
-    
+    padding: 8px;
+    margin-left: 10px;
+    font-family: "Martian Mono", monospace;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: text;
+    transition: border-color 0.2s;
+  }
+  
+  .input-time:focus {
+    outline: none;
+    border-color: #48504f;
   }
