@@ -30,3 +30,14 @@
     letter-spacing: 4px;
     font-weight: bold;
 }
+
+.clock:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+  }
+  
+  /* Add transition animation to .clock */
+  .clock {
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Existing styles here */
+  }

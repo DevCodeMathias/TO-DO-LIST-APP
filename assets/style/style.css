@@ -16,17 +16,6 @@ body {
   justify-content: center;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 h1 {
   font-family: 'Martian Mono', monospace;
@@ -92,20 +81,20 @@ h1 {
 }
 
 .input-time {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 8px;
-  margin-left: 10px;
-  font-family: 'Martian Mono', monospace;
-  font-size: 14px;
-  background-color: #f2f2f2;
-  color: #333;
-  cursor: text;
-  transition: border-color 0.2s;
-}
-
-
-.input-time:focus {
-  outline: none;
-  border-color: #48504f;
-}
+    border: none;
+    border-bottom: 2px solid #333; 
+    padding: 8px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 14px;
+    background-color: transparent; 
+    color: #333;
+    cursor: text;
+    transition: border-color 0.2s;
+    width: 100%; 
+    max-width: 250px; 
+  }
+  
+  .input-time:focus {
+    border-color: #48504f;
+    outline: none;
+  }
