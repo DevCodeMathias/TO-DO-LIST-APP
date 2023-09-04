@@ -1,87 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&display=swap');
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'open Sans', sans-serif;
-    
-}
-body{
-    background: linear-gradient(120deg, #00FFED, #9d00c6);
-}
-h1{
-    font-family: Martian Mono;
-    color: aliceblue;
-    text-shadow: 1px 1px 1px rgb(20, 19, 19); 
-   
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh ;
-    gap: 40px;
-    min-height: 100vh;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Martian Mono', monospace;
+  box-sizing: border-box;
 }
 
-.add__{
-    height: 25px;
-    border-style: none;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0px 8px 10px rgba(0, 0,0,.2);
-    
+body {
+  background: linear-gradient(120deg, #00FFED, #9d00c6);
+  animation: gradientAnimation 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  font-family: 'Martian Mono', monospace;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px rgb(20, 19, 19);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.add__ {
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  padding: 8px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Martian Mono', monospace;
+}
+
 .add__:focus {
-    outline: none;
-  }
+  outline: none;
+}
 
-.bnt_add{
-    height: 25px;
-    width: 50px;
-    border-radius: 5px;
-    border-style: none;
-    font-family:Martian Mono ;
-    box-shadow: 0px 8px 10px rgba(0, 0,0,.2);
-    cursor: pointer;
+.bnt_add {
+  height: 25px;
+  width: 50px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Martian Mono', monospace;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: #333;
+  color: aliceblue;
 }
-.bnt_add:hover{
-    color: #b0a4a4;;
+
+.bnt_add:hover {
+  background-color: #555;
 }
-.task-item{
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    width: 300px; 
-    box-shadow: 0px 8px 10px rgba(0, 0,0,.5);
-   
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
 }
+
 .task-checkbox {
-    margin-right: 10px;
-    margin-left: auto;
-    
-  }
+  margin-right: 10px;
+  margin-left: auto;
+}
 
-  
+.input-time {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 10px;
+  font-family: 'Martian Mono', monospace;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: text;
+  transition: border-color 0.2s;
+}
 
-  .input-time {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px;
-    margin-left: 10px;
-    font-family: "Martian Mono", monospace;
-    font-size: 14px;
-    background-color: #f2f2f2;
-    color: #333;
-    cursor: text;
-    transition: border-color 0.2s;
-  }
-  
-  .input-time:focus {
-    outline: none;
-    border-color: #48504f;
-  }
+
+.input-time:focus {
+  outline: none;
+  border-color: #48504f;
+}

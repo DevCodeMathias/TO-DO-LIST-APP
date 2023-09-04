@@ -3,14 +3,9 @@ const input = document.querySelector(".add__")
 const taskList = document.querySelector('.tasklist')
 
 
-
-
 var myTask = (function(){
     addbutton.addEventListener('click',function(){
 
-        
-        
-        
         const task = input.value
         const newTask = document.createElement('li')
         const taskText = document.createElement('span');
