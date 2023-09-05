@@ -18,8 +18,8 @@ Welcome to the To-Do List web application! This simple web app allows you to man
 2. Use the input field and "Add+" button to add tasks to your to-do list. Each task will appear in the task list section.
 3. You can mark a task as completed by clicking on it.
 4. The real-time clock shows the current hour, minute, and second, keeping you updated.
-5. While holding the mouse button, drag the task to your desired position within the task list.
-6 .Release the mouse button to drop the task into its new position.
+5. While holding the mouse button, drag the task to your desired position within the task list
+6. Release the mouse button to drop the task into its new position.
 
 
 ## Technologies Used
