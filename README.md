@@ -1,6 +1,6 @@
 # To-Do List Web App
 
-![image](https://github.com/CEPIZIN/Todo/assets/116749645/7ca3148c-578d-4700-a8ea-ad7e119ff142)
+![image](https://github.com/CEPIZIN/TO-DO-LIST-APP/assets/116749645/65b66001-8093-43bd-aa7c-8b268f1c1a47)
 
 
 Welcome to the To-Do List web application! This simple web app allows you to manage your daily tasks, stay organized, and keep track of your schedule. You can add tasks, mark them as completed, and maintain an efficient task list for your day.
