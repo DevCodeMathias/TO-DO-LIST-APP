@@ -2,6 +2,38 @@ const addbutton = document.querySelector('.bnt_add')
 const input = document.querySelector(".add__")
 const taskList = document.querySelector('.tasklist')
 
+
+addbutton.addEventListener('click', function () {
+    const task = input.value;
+    
+    if (task !== '') {
+        const newTask = document.createElement('li');
+        const checkbox = document.createElement('input');
+        const meet = document.createElement('input');
+        
+        meet.type = 'time';
+        checkbox.type = 'checkbox';
+        meet.classList.add('input-time');
+        checkbox.classList.add('task-checkbox');
+        newTask.classList.add('task-item');
+
+        newTask.textContent = task;
+        newTask.appendChild(meet);
+        newTask.appendChild(checkbox);
+        taskList.appendChild(newTask);
+        
+        makeTaskDraggable(newTask);
+        
+        input.value = '';
+        
+        checkbox.addEventListener('click', function () {
+            setTimeout(function () {
+                newTask.remove();
+            }, 1000);
+        });
+    }
+});
+
 function makeTaskDraggable(taskElement) {
     taskElement.draggable = true;
 
@@ -15,37 +47,6 @@ function makeTaskDraggable(taskElement) {
     });
 }
 
-addbutton.addEventListener('click', function () {
-    const task = input.value;
-
-    if (task !== '') {
-        const newTask = document.createElement('li');
-        const taskText = document.createElement('span');
-        const checkbox = document.createElement('input');
-        const meet = document.createElement('input');
-
-        meet.type = 'time';
-        checkbox.type = 'checkbox';
-        meet.classList.add('input-time');
-        checkbox.classList.add('task-checkbox');
-        newTask.classList.add('task-item');
-
-        newTask.textContent = task;
-        newTask.appendChild(meet);
-        newTask.appendChild(checkbox);
-        taskList.appendChild(newTask);
-
-        makeTaskDraggable(newTask);
-
-        input.value = '';
-
-        checkbox.addEventListener('click', function () {
-            setTimeout(function () {
-                newTask.remove();
-            }, 1000);
-        });
-    }
-});
 
 taskList.addEventListener('dragover', function (e) {
     e.preventDefault();
@@ -63,7 +64,7 @@ taskList.addEventListener('dragover', function (e) {
 
 function getDragAfterElement(container, y) {
     const draggableElements = [...container.querySelectorAll('.task-item:not(.dragging)')];
-
+    
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
         const offset = y - box.top - box.height / 2;

@@ -99,3 +99,12 @@ h1 {
     border-color: #48504f;
     outline: none;
   }
+  
+  .task-item.dragging {
+    opacity: 0.5; 
+    border: 2px dashed #000; 
+}
+
+.task-item.drag-over {
+    border: 2px solid #000; 
+}
